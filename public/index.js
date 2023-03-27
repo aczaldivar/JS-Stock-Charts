@@ -28,10 +28,14 @@ async function main() {
 
     const stocks = [GME, MSFT, DIS, BNTX];
 
-    stocks.forEach( stock => stock.values.reverse());
+    //stocks.forEach( stock => stock.values.reverse())
 
     // Time Chart
+    const values = TimeRanges;
     stocks.forEach( stock => stock.values.reverse())
+   // console.log(Chart)
+//Time Chart
+stocks.forEach( stock => stock.values.reverse());
 
 // Time Chart
 new Chart(timeChartCanvas.getContext('2d'), {
@@ -46,6 +50,8 @@ new Chart(timeChartCanvas.getContext('2d'), {
         }))
     }
 });
+
+
 
     
 
@@ -109,5 +115,15 @@ function calculateAverage(values) {
 }
 
 main()
+
+
+
+
+
+
+
+
+
+
 
 
