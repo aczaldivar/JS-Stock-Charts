@@ -21,13 +21,13 @@ async function main() {
     const averagePriceChartCanvas = document.querySelector('#average-price-chart');
 
     const response = await fetch(`https://api.twelvedata.com/time_series?symbol=GME,MSFT,DIS,BNTX&interval=1day&apikey=81787819b3c94a78a32164a428ed5059`)
-
-    const result = await response.json()
-
+   
+ //   const result = await response.json()
+    const result= mockData
     const { GME, MSFT, DIS, BNTX } = result;
-
+    console.log (result)
     const stocks = [GME, MSFT, DIS, BNTX];
-
+    console.log (stocks)
     //stocks.forEach( stock => stock.values.reverse())
 
     // Time Chart
@@ -48,9 +48,11 @@ new Chart(timeChartCanvas.getContext('2d'), {
             backgroundColor: getColor(stock.meta.symbol),
             borderColor: getColor(stock.meta.symbol),
         }))
-    }
+  
+}
 });
 
+                                                 
 
 
     
